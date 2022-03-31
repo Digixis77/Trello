@@ -1,8 +1,6 @@
 import numpy as np 
 import pandas as pd 
 import json 
-import matplotlib as plt 
-import seaborn as sns 
 import streamlit as st
 import requests 
 from datetime import datetime

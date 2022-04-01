@@ -3,15 +3,15 @@ import pandas as pd
 import json 
 import streamlit as st
 import requests 
-from datetime import datetime,timedelta
+import datetime
 
 
 
 st.title('Trello Dashboard')
 
-today = datetime.now()
+today = datetime.datetime.now()
 day_last_week = today - datetime.timedelta(7)
-day_last_week =  today - datetime.timedelta(30)
+day_last_month =  today - datetime.timedelta(30)
 
 
 #@st.cache

@@ -3,20 +3,16 @@ import pandas as pd
 import json 
 import streamlit as st
 import requests 
-from datetime import datetime
+from datetime import datetime,timedelta
 
 
 
 st.title('Trello Dashboard')
 
 today = datetime.now()
-day_last_week = today.replace(day=today.day - 7)
-day_last_week = pd.to_datetime(day_last_week)
-if today.month -1 == 2 and today.day > 28:
-    day_last_month = datetime(year = today.year, month = 2, day = 28, hour= 10, minute=19, second= 10)
-else : 
-    day_last_month = today.replace(month=today.month - 1)
-    day_last_month = pd.to_datetime(day_last_month)
+day_last_week = today - datetime.timedelta(7)
+day_last_week =  today - datetime.timedelta(30)
+
 
 #@st.cache
 #def load_data(URL):
